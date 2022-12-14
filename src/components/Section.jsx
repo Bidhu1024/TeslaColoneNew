@@ -3,10 +3,10 @@ import React from "react";
 import styled from "styled-components";
 // import backg from "../Assets/model-s.jpg";
 import downarr from "../Assets/down-arrow.svg";
-const Section = ({title, description,leftBtnText, rightBtnText}) => {
+const Section = ({title, description,leftBtnText, rightBtnText, backgroundImg}) => {
 //  console.log(backgroundImg);
   return (
-    <Wrap>
+    <Wrap style={{width:'100vw', height:'100vh', background:`url(${backgroundImg})`, backgroundSize:'cover', backgroundPosition:'center'}}>
       <ItemText>
         <h1>{title}</h1>
         <p>{description}</p>
@@ -30,12 +30,11 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;  
-  /* background-image: url(${backgroundImg}); */
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* background-image: ${props => `url("/Assets/${props.bgImage}")`} */
 `;
 const ItemText = styled.div`
   padding-top: 15vh;
