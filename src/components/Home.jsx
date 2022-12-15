@@ -7,6 +7,7 @@ import modely from "../Assets/model-y.jpg"
 import model3 from "../Assets/model-3.jpg"
 import solar from "../Assets/solar-panel.jpg"
 import solarroof from "../Assets/solar-roof.jpg"
+import accessories from '../Assets/accessories.jpg'
 const Home = () => {
   return (
     <Container>
@@ -52,6 +53,15 @@ const Home = () => {
         backgroundImg = {solarroof}
         leftBtnText = "Custom Order"
         rightBtnText="Existing Inventory"
+      >
+
+      </Section>
+          <Section
+        title="Accessories"
+        description="Solar roof Costs less than a new roof plus solar panel"
+        backgroundImg = {accessories}
+        leftBtnText = "Shop now"
+        
       >
 
       </Section>
