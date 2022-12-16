@@ -3,20 +3,25 @@ import React from "react";
 import styled from "styled-components";
 // import backg from "../Assets/model-s.jpg";
 import downarr from "../Assets/down-arrow.svg";
+import Fade from 'react-reveal/Fade';
 const Section = ({title, description,leftBtnText, rightBtnText, backgroundImg}) => {
 //  console.log(backgroundImg);
   return (
     <Wrap style={{width:'100vw', height:'100vh', background:`url(${backgroundImg})`, backgroundSize:'cover', backgroundPosition:'center'}}>
+     <Fade bottom>
       <ItemText>
         <h1>{title}</h1>
         <p>{description}</p>
       </ItemText>
+      </Fade>
       <Buttons>
+      <Fade bottom>
         <ButtonGroup>
           <LeftButton>{leftBtnText}</LeftButton>
           {rightBtnText &&
           <RightButton>{rightBtnText}</RightButton>}
         </ButtonGroup>
+        </Fade>
         <DownArrow src={downarr}></DownArrow>
       </Buttons>
     </Wrap>
@@ -26,6 +31,7 @@ const Section = ({title, description,leftBtnText, rightBtnText, backgroundImg}) 
 export default Section;
 
 const Wrap = styled.div`
+z-index: 10;
   width: 100vw;
   height: 100vh;
   background-size: cover;
